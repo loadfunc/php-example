@@ -1,6 +1,6 @@
 <?php
-// install.bat
-// ./install.sh
+# install.bat
+# ./install.sh
 
 include 'load_func.php';
 
