@@ -1,21 +1,9 @@
 <?php
-// curl https://letfunc.github.io/php/let_func.php --output let_func.php
-include 'let_func.php';
-
-# Class: Sync / Async
-$code = new LetFunc("https://letjson.github.io/php/let_json.php", "let_json", "https://letjson.github.io/js/letjson.json");
-
-# Class / Sync
-$value = $code->exec();
-var_dump(1, $value);
-
-# Class / Async
-$value = $code->each(function ($value) {
-    var_dump(2, $value);
-});
-
+// curl https://loadfunc.github.io/php/load_func.php --output load_func.php
+include 'load_func.php';
 
 # Function Async
-let_func("https://letjson.github.io/php/let_json.php", "let_json", "https://letjson.github.io/js/letjson.json", function ($value) {
-    var_dump(3, $value);
+load_func(["https://letjson.github.io/php/let_json.php"], function () {
+    $objs = let_json("https://letjson.github.io/js/letjson.json");
+    var_dump($objs);
 });
