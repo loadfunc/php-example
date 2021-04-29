@@ -1,5 +1,7 @@
 <?php
-// curl https://loadfunc.github.io/php/load_func.php --output load_func.php
+// install.bat
+// ./install.sh
+
 include 'load_func.php';
 
 # Function Async
